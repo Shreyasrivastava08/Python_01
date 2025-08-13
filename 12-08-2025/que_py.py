@@ -1,0 +1,55 @@
+
+
+def unique_elements(lst):
+    unique_list = []
+    for item in lst:
+        if item not in unique_list:
+            unique_list.append(item)
+    return unique_list
+
+# Example usage
+data = [1, 2, 2, 3, 4, 1, 5]
+print(unique_elements(data))
+
+def rotate_list(lst, k):
+    k = k % len(lst)  # Handle if k > length of list
+    return lst[-k:] + lst[:-k]
+
+# Example usage
+data = [1, 2, 3, 4, 5]
+print(rotate_list(data, 2))
+
+def longest_word(sentence):
+    words = sentence.split()
+    longest = ""
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+    return longest
+
+# Example usage
+text = "Python is an amazing programming language"
+print(longest_word(text))
+
+def sum_of_digits(num):
+    total = 0
+    for digit in str(num):
+        total += int(digit)
+    return total
+
+# Example usage
+number = 12345
+print(sum_of_digits(number))
+
+def char_frequency(s):
+    freq = {}
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+
+# Example usage
+text = "hello"
+print(char_frequency(text))
